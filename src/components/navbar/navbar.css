@@ -1,0 +1,128 @@
+.bts_navbar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.bts_navbar_container_row {
+    z-index: 999;
+    /* position: fixed;
+    top: 0; */
+    background-color: inherit;
+    box-sizing: border-box;
+    width: 1240px;
+    display: flex;
+    gap: 80px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    color: inherit;
+    /* border-bottom: 1px solid var(--secondaryColor); */
+    /* box-shadow: 0 0 5px var(--secondaryColor); */
+}
+
+.bts_mobile_CTABtn_cont {
+    display: none;
+}
+
+.bts_logo_container {
+    display: grid;
+    place-items: center;
+}
+
+.bts_hamburger_cont {
+    display: none;
+    cursor: pointer;
+}
+
+.bts_logo {
+    width: 30px;
+}
+
+.menu_container {
+    width: 40%;
+    min-width: 500px;
+    height: 50px;
+}
+
+.bts_close_cont {
+    display: none;
+    position: absolute;
+    z-index: 5;
+    cursor: pointer;
+    color: white;
+}
+
+.bts_navbar_btn {
+    display: flex;
+    gap: 20px;
+}
+
+
+/* Laptop and small screens */
+
+/* @media screen and (min-width: 1200px) {
+    
+} */
+
+@media screen and (max-width: 1024px) {
+    .bts_mobile_CTABtn_cont {
+        display: flex;
+    }
+
+    .bts_navbar_btn_container,
+    .menu_container {
+        display: none;
+    }
+
+    .bts_hamburger_cont {
+        display: flex;
+        align-items: center;
+    }
+
+    .bts_close_cont {
+        display: block;
+        position: absolute;
+        right: 45px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .bts_navbar_container_row {
+        padding: 10px 40px;
+    }
+
+    .bts_close_cont {
+        right: 40px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .bts_navbar_container_row {
+        padding: 10px 30px;
+    }
+
+    .bts_close_cont {
+        right: 30px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .bts_logo {
+        width: 70px;
+    }
+
+    .bts_navbar_container_row {
+        /* flex-direction: row-reverse; */
+        padding: 10px 25px;
+    }
+
+    .bts_close_cont {
+        right: 25px;
+    }
+}
+
+/* @media screen and (min-width: 320px) {
+    
+} */

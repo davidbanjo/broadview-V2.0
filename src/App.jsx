@@ -1,7 +1,6 @@
 import './App.css'
-import Header from "./components/header/Header.jsx"
 import Footer from "./components/footer/Footer.jsx"
-import Navbar from './components/NavbarDemo.tsx'
+import Navbar from './components/navbar/Navbar.jsx'
 
 const App = () => {
 
@@ -9,8 +8,8 @@ const App = () => {
 
   return (
     <>
-      <Header />
       <Navbar />
+      {/* <Navbar /> */}
       <Footer />
     </>
   )
