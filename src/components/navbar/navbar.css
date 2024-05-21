@@ -2,15 +2,19 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgb(52, 52, 52);
+    z-index: 9999999999 !important;
 }
 
 .bts_navbar_container_row {
     z-index: 999;
-    /* position: fixed;
-    top: 0; */
-    background-color: inherit;
+    position: absolute;
+    top: 0;
+    background-color: transparent;
     box-sizing: border-box;
-    width: 1240px;
+    max-width: 1240px;
+    width: 100%;
     display: flex;
     gap: 80px;
     justify-content: space-between;
@@ -56,6 +60,7 @@
 .bts_navbar_btn {
     display: flex;
     gap: 20px;
+    align-items: center;
 }
 
 

@@ -3,3 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
+.bts_colored_text {
+    color: var(--primaryColor);
+}

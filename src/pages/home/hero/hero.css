@@ -1,0 +1,34 @@
+.bts_hero {
+    height: 100vh !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bts_hero_row {
+    max-width: 1240px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    padding: 0 1.5rem;
+}
+
+.bts_hero_text {
+    text-align: center;
+    /* font-size: 4.5rem; */
+    font-size: 96px;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: -0.014em;
+}
+
+.bts_hero_desc {
+    text-align: center;
+    font-size: 22px;
+    line-height: 1.1666666667;
+    font-weight: 600;
+    letter-spacing: .009em;
+}
