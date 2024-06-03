@@ -1,0 +1,242 @@
+.bts_portfolio {
+    padding: 50px 80px;
+}
+
+.bts_project_cards {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.bts_project-card {
+    width: 450px;
+    height: 300px;
+    border-radius: 15px;
+}
+
+.bts_project_row {
+    max-width: 100%;
+    width: 1240px;
+    margin: auto;
+    padding: 0 50px;
+}
+
+.cs-1 {
+    background-image: url('../../assets/test-portfolio.jpg');
+    background-size: cover;
+    /* background-position: center; */
+}
+
+.cs-2 {
+    background-image: url('../../assets/eta_hero_img.png');
+    background-size: cover;
+    /* background-position: center; */
+}
+
+.cs-3 {
+    background-image: url('../../assets/binatec_hero.png');
+    background-size: cover;
+}
+
+.cs-4 {
+    background-image: url('../../assets/cac_hero.png');
+    background-size: cover;
+}
+
+.cs-5 { 
+    background-image: url('../../assets/greenbelt_hero_image.png');
+    background-size: cover;
+}
+
+.cs-6 { 
+    background-image: url('../../assets/sonivox_hero.png');
+    background-size: cover;
+}
+
+.cs-7 { 
+    background-image: url('../../assets/TokenizedMixFIts_hero.png');
+    background-size: cover;
+}
+
+.bts_category_cont {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.bts_category_cont > p {
+    font-size: 14px;
+    background-color: var(--secondaryColor);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+}
+
+.bts_project-card_cont {
+    margin-bottom: 20px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.bts_project-card_cont:hover {
+    border-radius: 15px;
+    background: rgba( 255, 255, 255, 0.2 );
+    box-shadow: 0 8px 10px 0 #58585833;
+    backdrop-filter: blur( 7px );
+    -webkit-backdrop-filter: blur( 7px );
+    border: 1px solid #fa921c69;
+    padding: 10px;
+    padding-bottom: 20px;
+}
+
+.bts_project-card_cont > h3 {
+    margin: 10px 0;
+    font-size: 30px;
+}
+
+.bts_project {
+    padding: 50px 80px;
+}
+
+.bts_project_summary {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: flex-start;
+    justify-content: center;
+    padding-bottom: 30px;
+    margin: 20px 0;
+    border-bottom: 1px solid var(--primaryColor);
+}
+
+.bts-text-left {
+    text-align: left !important;
+}
+
+.bts_project_summary > div, .bts_project_summary > p {
+    width: 100%;
+}
+
+.bts_project_summary > div > h1 {
+    margin: 0;
+}
+
+.bts_project_logo {
+    width: 120px;
+}
+
+.bts_project_category {
+    display: flex;
+    gap: 20px;
+}
+
+.bts_project_img {
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.bts_project_img > img {
+    width: 80%;
+    margin: 40px auto;
+    border-radius: 25px;
+    box-shadow: 0 0 8px rgb(230, 229, 229);
+}
+
+.bts_project_testimonial {
+    font-size: 21px;
+    text-align: center;
+    width: 70%;
+    margin: auto;
+}
+
+.bts_project_testimonial_author {
+    color: rgb(157, 157, 157);text-align: center;
+}
+
+.bts_project_about-client {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+.bts_project_about-client > div, .bts_project_about-client > img {
+    /* flex-basis: 1; */
+    width: 50%;
+}
+
+.bts_project_about-client > img {
+    width: 40%;
+}
+
+@media screen and (max-width: 1024px) {
+    .bts_portfolio, .bts_project {
+        padding: 30px 50px;
+    }
+
+    .bts_project-card_cont {
+        width: 100%;
+    }
+
+    .bts_project-card {
+        width: 100%;
+    }
+
+    .bts_project_summary {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .bts_project_summary > div, .bts_project_summary > p {
+        width: 100%;
+    }
+
+    .bts_project_about-client {
+        flex-direction: column-reverse;
+    }
+
+    .bts_project_about-client > div, .bts_project_about-client > img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .bts_portfolio, .bts_project {
+        padding: 30px 40px;
+    }
+
+    .bts_project_img > img {
+        width: 100%;
+    }
+
+    .bts_project_cards {
+        box-sizing: border-box;
+        padding: 0 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .bts_portfolio, .bts_project {
+        padding: 30px 30px;
+    }
+    .bts_project-card {
+        width: 100%;
+    }
+
+    .bts_project_testimonial {
+        font-size: 18px;
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .bts_portfolio, .bts_project {
+        padding: 30px 20px;
+    }
+}

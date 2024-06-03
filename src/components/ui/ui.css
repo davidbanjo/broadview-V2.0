@@ -1,0 +1,29 @@
+/* Infinite Scroll Component Start */
+
+.bts-portfolio-img-cont {
+    position: relative;
+}
+
+.bts-portfolio-img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    background-color: #2424248c;
+    display: none;
+}
+
+.bts-portfolio-img-cont:hover > .bts-portfolio-img-overlay {
+    display: grid;
+}
+
+.bts-portfolio-img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+/* Infinite Scroll Component End */

@@ -1,6 +1,5 @@
 import { Route, Routes } from "react-router"
 // import Error from "./pages/error/Error"
-// import Contact from "./pages/contact/Contact"
 import Home from "./pages/home/Home"
 // import About from "./pages/about/About"
 // import Services from "./pages/services/Services"
@@ -14,6 +13,10 @@ import Home from "./pages/home/Home"
 // import ProjectCategory from "./pages/portfolio/sections/projects/ProjectCategory"
 // import Website from "./pages/services/website/Website"
 import "./App.css"
+import Contact from "./pages/contact/Contact"
+import Portfolio from "./pages/portfolio/Portfolio"
+import ProjectCategory from "./pages/portfolio/sections/projects/ProjectCategory"
+import Project from "./pages/portfolio/sections/projects/Project"
 
 const AllRoutes = () => {
     return (
@@ -21,7 +24,11 @@ const AllRoutes = () => {
             <Routes>
                 {/* <Route path="*" element={<Error />} /> */}
                 <Route path="/" element={<Home />} />
-                {/* <Route path="/contact" element={<Contact />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/portfolio" element={<Portfolio />} />
+                <Route path="/portfolio/category/:category" element={<ProjectCategory />} />
+                <Route path="/portfolio/:id" element={<Project />} />
+                {/* 
                 <Route path="/about" element={<About />} />
                 <Route path="/services" element={<Services />} />
                 <Route path="/services/software-development" element={<Software />} />

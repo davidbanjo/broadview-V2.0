@@ -1,6 +1,9 @@
 
 import React, { useEffect, useState } from "react";
 import { cn } from "../../../utils/cn";
+import TopGradient from "../buttons/TopGradient";
+import { Link } from "react-router-dom";
+import "./ui.css"
 
 export const InfiniteMovingCards = ({
   items,
@@ -13,6 +16,8 @@ export const InfiniteMovingCards = ({
     quote: string;
     name: string;
     title: string;
+    url: string;
+    link: string;
   }[];
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
@@ -72,7 +77,7 @@ export const InfiniteMovingCards = ({
     <div
       ref={containerRef}
       className={cn(
-        "scroller relative z-20  max-w-7xl overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+        "scroller relative z-20  max-w-[100rem] overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
         className
       )}
     >
@@ -86,13 +91,21 @@ export const InfiniteMovingCards = ({
       >
         {items.map((item, idx) => (
           <li
-            className="w-[350px] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 border-slate-700 px-8 py-6 md:w-[450px]"
+            className="w-[350px] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 border-slate-700 px-4 py-3 md:w-[450px]"
             style={{
               background:
                 "linear-gradient(180deg, var(--slate-800), var(--slate-900)",
             }}
             key={item.name}
           >
+            <div className="bts-portfolio-img-cont">
+              <img className="bts-portfolio-img rounded-2xl" src={item.url} alt={item.name} />
+              <div className="bts-portfolio-img-overlay">
+                <Link to={item.link}>
+                  <TopGradient content="View Project" />
+                </Link>
+              </div>
+            </div>
             <blockquote>
               <div
                 aria-hidden="true"
@@ -103,7 +116,7 @@ export const InfiniteMovingCards = ({
               </span>
               <div className="relative z-20 mt-6 flex flex-row items-center">
                 <span className="flex flex-col gap-1">
-                  <span className=" text-sm leading-[1.6] text-gray-400 font-normal">
+                  <span className=" text-sm leading-[1.6] text-white-400 font-normal">
                     {item.name}
                   </span>
                   <span className=" text-sm leading-[1.6] text-gray-400 font-normal">

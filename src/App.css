@@ -6,3 +6,11 @@
 .bts_colored_text {
     color: var(--primaryColor);
 }
+
+.bts-spacer-x1 {
+    height: 25px;
+}
+
+.bts-spacer-x2 {
+    height: 50px;
+}

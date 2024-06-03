@@ -1,0 +1,26 @@
+.bts-info-card {
+    background-color: #16161798;
+    height: 120px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+}
+
+.bts-info-card-row {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bts-info-card-logo {
+    width: 100px;
+}
+
+.bts-info-card-content {
+    font-size: 21px;
+}

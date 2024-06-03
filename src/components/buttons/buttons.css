@@ -79,6 +79,23 @@
     background-color: var(--primaryColor);
 }
 
+/* TOP GRADIENT BUTTON START */
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.animate-fade-in {
+    animation: fade-in 0.5s ease-in-out; /* Adjust duration and easing as needed */
+  }
+/* TOP GRADIENT BUTTON END */
+
 @media screen and (max-width: 480px) {
     .bts_primaryBtn, .bts_secondary_btn {
         width: 100%;

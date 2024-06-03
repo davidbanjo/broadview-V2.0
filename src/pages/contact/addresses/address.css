@@ -1,0 +1,14 @@
+.bts_address_cont {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.bts_address_cont > div {
+    border-bottom: 1px solid var(--primaryColor);
+    margin-bottom: 15px;
+}
+
+.bts_address_cont > div > h3 {
+    font-size: 20px;
+}

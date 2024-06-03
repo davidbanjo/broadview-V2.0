@@ -1,0 +1,29 @@
+.bts_tab_cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.bts_not_clicked {
+    border: 1px solid var(--primaryColor);
+    padding: 8px 15px;
+    border-radius: 20px;
+    background-color: white;
+    cursor: pointer;
+    transition: .5s;
+    color: black;
+    margin: 0;
+}
+
+.bts_not_clicked:hover {
+    box-shadow: 0 0 6px lightgrey;
+    background-color: var(--primaryColor);
+    color: white;
+}
+
+.bts_clicked {
+    background-color: var(--primaryColor);
+    color: white;
+}
