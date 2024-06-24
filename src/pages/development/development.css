@@ -1,0 +1,128 @@
+.bts_software_hero {
+    box-sizing: border-box;
+    padding: 50px 80px;
+}
+
+.bts_software_hero_cont {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.bts_software-heroImg {
+    width: 630px;
+    /* object-fit: cover; */
+    animation-name: floating;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes floating {
+    from {
+        transform: translateY(-10px);
+    }
+    to {
+        transform: translateY(10px);
+    }
+}
+
+.bts_software_process_row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.bts_software_service > h5 {
+    margin: 0;
+    font-size: 21px;
+    margin-top: 15px;
+}
+
+.bts_software_service {
+    padding: 25px;
+    /* box-sizing: border-box; */
+    width: 250px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    border-right: 2px dashed;
+    border-bottom: 2px dashed;
+    border-color: #FB9028;
+}
+
+.bts_software_services_container {
+    padding: 80px;
+    padding-bottom: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.bts_true {
+    border-right: none;
+}
+
+.bts_bottom_true {
+    border-bottom: none;
+}
+
+@media screen and (max-width: 768px) {
+    .bts_software_hero {
+        padding: 10px 30px;
+    }
+
+    .bts_software_hero_cont {
+        flex-direction: column;
+    }
+
+    .bts_software-heroImg {
+        width: 100%;
+    }
+}
+
+/* PROCESS CARD */
+
+.bts_process-card {
+    /* border: 1px solid rgb(77, 77, 77); */
+    border-radius: 20px;
+    padding: 30px;
+    padding-top: 40px;
+    position: relative;
+    background: rgba( 255, 255, 255, 0.2 );
+    box-shadow: 0 8px 10px 0 #58585833;
+    backdrop-filter: blur( 7px );
+    -webkit-backdrop-filter: blur( 7px );
+    /* border-radius: 10px; */
+    border: 1px solid #fa921c69;
+    transition: .3s ease;
+    cursor: pointer;
+    min-width: 230px;
+    max-width: 280px;
+    height: 390px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    gap: 15px;
+}
+
+.bts_process-card:hover {
+    box-shadow: 0 0px 0px 0 #58585833;
+}
+
+.bts_counter_cont {
+    width: 50px;
+    height: 50px;
+    background-color: var(--primaryColor);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    right: 10px;
+    top: -20px;
+    color: white;
+}

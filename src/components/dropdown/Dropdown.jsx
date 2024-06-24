@@ -9,27 +9,27 @@ const Dropdown = () => {
         <div className="bts_dropdown">
             <ul>
                 <li>
-                    <Link className="bts_dropdown_link" to="/services/talent-acquisition">
+                    <Link className="bts_dropdown_link" to="/services/staffing-solutions">
                         <span>
                             <img className="bts_dropdown_icon" src={talent} alt="talent"/>
                         </span>
-                        Strategic Talent Acquisition
+                        Staffing Solutions
                     </Link>
                 </li>
                 <li>
-                    <Link className="bts_dropdown_link" to="/services/software-development">
+                    <Link className="bts_dropdown_link" to="/services/development-services">
                         <span>
                             <img className="bts_dropdown_icon" src={software} alt="software"/>
                         </span>
-                        Software Development
+                        Development Services
                     </Link>
                 </li>
                 <li>
-                    <Link className="bts_dropdown_link" to="/services/web-development">
+                    <Link className="bts_dropdown_link" to="/services/digital-marketing">
                         <span>
                             <img className="bts_dropdown_icon" src={talent} alt="talent"/>
                         </span>
-                        Web Development
+                        Digital Marketing
                     </Link>
                 </li>
             </ul>

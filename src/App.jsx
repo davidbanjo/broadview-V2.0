@@ -1,19 +1,21 @@
+import { useEffect } from 'react'
 import AllRoutes from './AllRoutes.jsx'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import './App.css'
-import Footer from "./components/footer/Footer.jsx"
-import Navbar from './components/navbar/Navbar.jsx'
+import ScrollContainer from './components/scroll-container/ScrollContainer.jsx';
 
 const App = () => {
 
+  useEffect(() => {
+    AOS.init();
+  }, []);
   
 
   return (
-    <>
-      <Navbar />
-      {/* <Navbar /> */}
+    // <ScrollContainer>
       <AllRoutes />
-      <Footer />
-    </>
+    // </ScrollContainer>
   )
 }
 

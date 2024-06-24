@@ -7,10 +7,21 @@
     <meta name="description" property="og:description" content="Broadview Technical Solutions is a software development company dedicated to helping businesses succeed in the ever-evolving world of technology.
     With a team of experienced professionals and a wide range of services, we have the expertise and resources to take your business to the next level." />
     <title>Broadview Technical Solutions</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" defer >
+    <link rel="preconnect" href="https://www.youtube.com/embed/Pz_DlcCh0Ws?autoplay=1&loop=1&controls=0&showinfo=0&start=2&end=37&mute=1&playlist=Pz_DlcCh0Ws&rel=0&modestbranding=1">
+    <!-- Preload the Poppins font stylesheet -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <!-- Preload the Nunito Sans font stylesheet -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <!-- Fallback for browsers that do not support rel="preload" -->
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap">
+    </noscript>
+    <script defer src="https://www.youtube.com/iframe_api"></script>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <script type="module" src="/src/main.jsx" defer ></script>
   </body>
 </html>

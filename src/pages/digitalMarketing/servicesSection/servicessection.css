@@ -1,0 +1,5 @@
+.checkIcons {
+    list-style-image: url('./img/check-icon.png') !important;
+    padding: 0;
+    margin-left: 30px;
+}

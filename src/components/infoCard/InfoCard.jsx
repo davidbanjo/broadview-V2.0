@@ -1,10 +1,11 @@
 import React from 'react'
 import './infocard.css'
 import ButtonMagic from '../buttons/ButtonMagic'
+import { Link } from 'react-router-dom'
 
-const InfoCard = ({ src, alt, content, cta }) => {
+const InfoCard = ({ src, alt, content, cta, className, url }) => {
   return (
-    <div className='bts-info-card'>
+    <div className={`bts-info-card ${className}`}>
         <div className="bts-info-card-row">
             <div className="bts-info-card-col">
                 <img className='bts-info-card-logo' src={src} alt={alt} />
@@ -13,7 +14,9 @@ const InfoCard = ({ src, alt, content, cta }) => {
                 <p className='bts-info-card-content'>{content}</p>
             </div>
             <div className="bts-info-card-col">
-                <ButtonMagic content={cta} />
+                <Link to={url}>
+                    <ButtonMagic content={cta} />
+                </Link>
             </div>
         </div>
     </div>

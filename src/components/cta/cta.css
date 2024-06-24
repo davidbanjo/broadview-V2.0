@@ -1,0 +1,9 @@
+@media screen and (max-width: 500px) {
+    .bts-cta {
+        padding: 20px !important;
+    }
+    .bts-cta-row {
+        display: flex;
+        flex-direction: column;
+    }
+}

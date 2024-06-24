@@ -1,0 +1,21 @@
+@media screen and (max-width: 450px) {
+    .bts-dm-services-col {
+        flex-direction: column;
+        padding: 0 20px;
+        gap: 4rem;
+    }
+
+    .bts-two-col-title {
+        font-size: 45px;
+    }
+
+    .bts-dm-services-col > div {
+        width: 100%;
+    }
+
+    .bts-two-col-testimonial {
+        bottom: -80px;
+        width: 90%;
+        right: 0;
+    }
+}

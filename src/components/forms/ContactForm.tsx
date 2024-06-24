@@ -4,17 +4,37 @@ import { Label } from "../ui/label";
 import { Input } from "../ui/input";
 import { useForm, ValidationError } from "@formspree/react"
 import { cn } from "../../../utils/cn";
+import "./forms.css"
+import ButtonMagic from "../buttons/ButtonMagic";
 
 function ContactForm({ center }) {
 
     const [ state, handleSubmit ] = useForm("mknlkgjb")
 
     if (state.succeeded) {
-      console.log("Form submitted");
+      return (
+        <>
+          <div className="bts_form_submitted_cont max-w-md w-full rounded-none md:rounded-2xl p-2 md:p-4 shadow-input bg-black dark:bg-black bts-contact-form-cont">
+          <div className="bts-spacer-x1"></div>
+              {/* <img className="bts_form_submitted_img" src={SubmittedImg} alt="3d casual life thank you letter in envelope" /> */}
+              <div>
+                  <h3>Thanks for Reaching Out!</h3>
+                  <p>A member of our team will reach out to you shortly to properly address your message request. However, kindly go ahead and schedule a Free consultation with us so we can better discuss how we can be of service. Thanks</p>
+                  <a href="https://calendly.com/btech-informational/broadview-technical-information-session">
+                    <ButtonMagic 
+                        content="Book a Call"
+                        className=""
+                    />
+                  </a>
+              </div>
+          {/* <div className="bts-spacer-x1"></div> */}
+          </div>
+        </>
+      )
     }
 
   return (
-    <div className="max-w-md w-full rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-black dark:bg-black">
+    <div className="max-w-md w-full rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-black dark:bg-black bts-contact-form-cont">
       <h2 className="font-bold text-xl text-neutral-200 dark:text-neutral-200">
         Reach Out To Us
       </h2>
@@ -27,12 +47,14 @@ Let's build the future together!
         <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
           <LabelInputContainer>
             <Label className="text-neutral-200" htmlFor="firstname">First name</Label>
-            <Input id="firstname" placeholder="Tyler" type="text" name="name" />
+            <div className="bts-spacer-x1"></div>
+            <Input id="firstname" placeholder="John" type="text" name="name" />
             <ValidationError prefix="FirstName" field="name" errors={state.errors} />
           </LabelInputContainer>
           <LabelInputContainer>
             <Label className="text-neutral-200" htmlFor="lastname">Last name</Label>
-            <Input id="lastname" placeholder="Durden" type="text" name="name"/>
+            <div className="bts-spacer-x1"></div>
+            <Input id="lastname" placeholder="Doe" type="text" name="name"/>
             <ValidationError prefix="LastName" field="name" errors={state.errors} />
           </LabelInputContainer>
         </div>
@@ -43,13 +65,14 @@ Let's build the future together!
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
           <Label className="text-neutral-200" htmlFor="email">How can we help you?</Label>
-          <textarea id="message" name="message" cols={40} placeholder="Enter your message" required></textarea>
+          <textarea className="flex h-40 w-full border-none bg-zinc-800 dark:bg-zinc-800 text-white dark:text-white shadow-input rounded-md px-3 py-2 text-sm file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-neutral-600 dark:placeholder-text-neutral-600 focus-visible:outline-none focus-visible:ring-[2px] focus-visible:ring-neutral-600 dark:focus-visible:ring-neutral-600 disabled:cursor-not-allowed disabled:opacity-50 dark:shadow-[0px_0px_1px_1px_var(--neutral-700)] group-hover/input:shadow-[0px_0px_1px_1px_var(--neutral-700)] transition duration-400" id="message" name="message" cols={40} placeholder="Enter your message" required></textarea>
           <ValidationError prefix="Email" field="email" errors={state.errors} />
         </LabelInputContainer>
 
         <button
           className="bg-zinc-800 relative group/btn from-zinc-900 dark:from-zinc-900 dark:to-zinc-900 to-zinc-900 block dark:bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
           type="submit"
+          disabled={state.submitting}
         >
           Sign up &rarr;
           <BottomGradient />
@@ -76,7 +99,7 @@ const LabelInputContainer = ({
   className?: string;
 }) => {
   return (
-    <div className={cn("flex flex-col space-y-2 w-full", className)}>
+    <div className={cn("flex flex-col space-y-0 w-full", className)}>
       {children}
     </div>
   );

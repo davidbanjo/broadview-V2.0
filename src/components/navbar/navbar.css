@@ -70,6 +70,13 @@
     
 } */
 
+@media screen and (max-width: 1550px)  {
+    .bts_logo {
+        width: 25px;
+    }
+}
+
+
 @media screen and (max-width: 1024px) {
     .bts_mobile_CTABtn_cont {
         display: flex;
@@ -104,6 +111,11 @@
 }
 
 @media screen and (max-width: 480px) {
+
+    .bts_logo {
+        width: 35px;
+    }
+
     .bts_navbar_container_row {
         padding: 10px 30px;
     }
@@ -114,9 +126,6 @@
 }
 
 @media screen and (max-width: 420px) {
-    .bts_logo {
-        width: 70px;
-    }
 
     .bts_navbar_container_row {
         /* flex-direction: row-reverse; */

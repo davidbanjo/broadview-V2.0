@@ -20,7 +20,7 @@
 .bts_hero_text {
     text-align: center;
     /* font-size: 4.5rem; */
-    font-size: 96px;
+    font-size: 90px;
     line-height: 1;
     font-weight: 700;
     letter-spacing: -0.014em;
@@ -32,4 +32,40 @@
     line-height: 1.1666666667;
     font-weight: 600;
     letter-spacing: .009em;
+}
+
+@media screen and (max-width: 1550px) {
+    .bts_hero_text {
+        font-size: 85px;
+    }
+
+    .bts_hero_row {
+        padding: 0 8rem;
+
+        gap: 50px;
+    }
+
+    .bts_hero_desc { 
+        font-size: 18px;
+        padding: 0 0px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .bts_hero {
+        padding: 0;
+        height: 1050px !important;
+    }
+
+    .bts_hero_row {
+        padding: 0 10px;
+    }
+
+    .bts_hero_text {
+        font-size: 44px;
+    }
+
+    .mobile-padding {
+        padding: 0 10px;
+    }
 }

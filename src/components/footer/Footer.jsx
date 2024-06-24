@@ -11,43 +11,44 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
-        <div className="bts_footer">
+        <div className="bts_footer !z-30 relative">
             <div className="bts_footer_container_row">
                 <div className="bts_footer_col">
                     <img className="bts_footer_logo" src={footerLogo} alt="broadview footer logo" />
+                    <div className="bts-spacer-x1"></div>
                     <div className="bts_footer_contact_info">
                         <div className="bts_footer_contact_info_address">
-                        <p><b>New Jersey:</b> 3000 Atrium Way, Suite 200, Mt. Laurel, NJ, 08054</p>
-                        <p><b>Delaware:</b> 18 Blevins Dr, Newcastle, DE 19720</p>
-                        <p><b>Texas:</b> 2902 E Arkansas Ln, Suite C, Arlington, TX 76010</p>
+                            <h6>Address:</h6>
+                            {/* <div className="bts-spacer-x1"></div> */}
+                            <p><b>New Jersey:</b> 3000 Atrium Way, Suite 200, Mt. Laurel, NJ, 08054</p>
+                            <p><b>Delaware:</b> 18 Blevins Dr, Newcastle, DE 19720</p>
+                            <p><b>Texas:</b> 2902 E Arkansas Ln, Suite C, Arlington, TX 76010</p>
                         </div>
-                        <h5>Phone</h5>
-                        <a href="tel:+16127729555">
-                            <p>+1 (856) 552-0417</p>
-                        </a>
                     </div>
                 </div>
                 <div className="bts_footer_col">
-                    <h4>Quick Links</h4>
+                    <h4 className="text-[21px]">Quick Links</h4>
+                    <div className="bts-spacer-x1"></div>
                     <FooterMenu />
                 </div>
                 <div className="bts_footer_col">
-                    <h4>Service</h4>
+                    <h4 className="text-[21px]">Service</h4>
+                    <div className="bts-spacer-x1"></div>
                     <ul className="bts_footer_navitems">
-                        <Link to="/services/talent-acquisition">
-                            <li className="bts_footer_navitem">Strategic Talent Acquisition</li>
+                        <Link to="/services/staffing-solutions">
+                            <li className="bts_footer_navitem font-normal">Staffing Solutions</li>
                         </Link>
-                        <Link to="/services/software-development">
-                            <li className="bts_footer_navitem">Software development</li>
+                        <Link to="/services/development-services">
+                            <li className="bts_footer_navitem font-normal">Development Services</li>
                         </Link>
-                        <Link to="/services/web-development">
-                            <li className="bts_footer_navitem">Website Development</li>
+                        <Link to="/services/digital-marketing">
+                            <li className="bts_footer_navitem font-normal">Digital Marketing</li>
                         </Link>
                     </ul>
                 </div>
                 <div className="bts_footer_col">
                     <h4 className="bts_footer_cta_text">Want to stay updated on latest trends related to your industry?</h4>
-                    <p className="bts_footer_cta_desc">We send out value in a juicy newsletter. Only Value</p>
+                    {/* <p className="bts_footer_cta_desc">We send out value in a juicy newsletter. Only Value</p> */}
                     <NewsletterCTA />
                     <div className="bts_footer_socials">
                         <a href="https://www.instagram.com/broadviewtechnical">
@@ -63,7 +64,13 @@ const Footer = () => {
                             <Phone width="40" height="40" color="white"/>
                         </a>
                     </div>
-                </div>
+                </div> 
+            </div>
+            <div className="flex absolute bottom-16 right-[90px] bg-[#FA931C] px-4 py-2">
+                <h5 style={{ paddingRight: "15px" }}>Phone: </h5>
+                <a href="tel:+16127729555">
+                    <p> +1 (856) 552-0417</p>
+                </a>
             </div>
         </div>
     )

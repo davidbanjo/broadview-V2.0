@@ -20,22 +20,24 @@ const MobileMenu = ({ close }) => {
                 <Link to="/about" onClick={close} >
                     <li className="bts_mobile_navitem">About Us</li>
                 </Link>
-                <Link to="/services" >
-                    <li className="bts_mobile_navitem">Services<span className="bts-arrow-cont" onClick={handle_mobile_dropdown}>{<ArrowRight width={30} height={30} color="white" />}</span></li>
+                    <li className="bts_mobile_navitem">
+                    <Link to="/services" onClick={close} style={{ color: 'white' }}>
+                        Services
+                    </Link>
+                        <span className="bts-arrow-cont" onClick={handle_mobile_dropdown}>{<ArrowRight width={30} height={30} color="white" />}</span></li>
                     {click &&
-                        <ul className="bts_mobile_subnavitem_cont">
-                            <Link to="/services/talent-acquisition" onClick={close}>
-                                <li className="bts_mobile_subnavitem">Strategic Talent Acquisition</li>
+                        <ul className="bts_mobile_subnavitem_cont !mt-0a">
+                            <Link to="/services/staffing-solutions" onClick={close}>
+                                <li className="bts_mobile_subnavitem">Staffing Solutions</li>
                             </Link>
-                            <Link to="/services/software-development" onClick={close}>
-                                <li className="bts_mobile_subnavitem">Software Development</li>
+                            <Link to="/services/development-services" onClick={close}>
+                                <li className="bts_mobile_subnavitem">Development Services</li>
                             </Link>
-                            <Link to="/services/web-development" onClick={close}>
-                                <li className="bts_mobile_subnavitem">Website Development</li>
+                            <Link to="/services/digital-marketing" onClick={close}>
+                                <li className="bts_mobile_subnavitem">Digital Marketing</li>
                             </Link>
                         </ul>
                     }
-                </Link>
                 <Link to="/portfolio" onClick={close}>
                     <li className="bts_mobile_navitem">Portfolio</li>
                 </Link>

@@ -64,10 +64,21 @@ form > div > fieldset {
 
 /* CONTACT FORM */
 
+.bts-contact-form-cont {
+    /* From https://css.glass */
+    background: rgba(228, 228, 228, 0.2) !important;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(228, 228, 228, 0.17);
+}
+
 .bts_contact_form {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    
 }
 
 .bts_contact_input {
@@ -95,21 +106,34 @@ form > div > fieldset {
 }
 
 .bts_form_submitted_cont {
-    padding: 0 70px;
+    padding: 0 30px;
+    padding-top: 40px;
     display: flex;
     /* align-items: center; */
     justify-content: center;
+    height: max-content !important;
+    padding-bottom: 40px;
+    width: 400px;
     /* border: 1px solid var(--primaryColor); */
 }
 
-.bts_form_submitted_img {
-    /* border: 1px solid var(--primaryColor); */
-    width: 350px;
+.bts_form_submitted_cont h3, .bts_form_submitted_cont p {
+    margin-bottom: 20px;
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 450px) {
     .bts_contact_form {
         width: 90%;
         margin: auto;
+    }
+
+    .bts-contact-form-cont {
+        backdrop-filter: none;
+        padding: 30px 10px;
+    }
+
+    .bts-contact-form-cont {
+        box-sizing: border-box;
+        /* margin: 0 20px; */
     }
 }

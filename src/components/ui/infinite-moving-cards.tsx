@@ -99,9 +99,9 @@ export const InfiniteMovingCards = ({
             key={item.name}
           >
             <div className="bts-portfolio-img-cont">
-              <img className="bts-portfolio-img rounded-2xl" src={item.url} alt={item.name} />
+              <img className="bts-portfolio-img rounded-2xl" src={item.url} alt={item.name} loading="lazy" />
               <div className="bts-portfolio-img-overlay">
-                <Link to={item.link}>
+                <Link to={`/portfolio/${item.name.replace(/\s+/g, '-')}`}>
                   <TopGradient content="View Project" />
                 </Link>
               </div>
@@ -116,12 +116,12 @@ export const InfiniteMovingCards = ({
               </span>
               <div className="relative z-20 mt-6 flex flex-row items-center">
                 <span className="flex flex-col gap-1">
-                  <span className=" text-sm leading-[1.6] text-white-400 font-normal">
+                  <span className=" text-lg leading-[1.6] text-white-400 font-normal py-2">
                     {item.name}
                   </span>
-                  <span className=" text-sm leading-[1.6] text-gray-400 font-normal">
+                  {/* <span className=" text-sm leading-[1.6] text-gray-400 font-normal">
                     {item.title}
-                  </span>
+                  </span> */}
                 </span>
               </div>
             </blockquote>
@@ -131,3 +131,5 @@ export const InfiniteMovingCards = ({
     </div>
   );
 };
+
+

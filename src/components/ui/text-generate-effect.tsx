@@ -1,7 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, stagger, useAnimate } from "framer-motion";
 import { cn } from "../../../utils/cn";
 import "./ui.css"
+
+type DelayOptions = number;
 
 export const TextGenerateEffect = ({
   words,
@@ -10,9 +12,11 @@ export const TextGenerateEffect = ({
 }: {
   words: string;
   className?: string;
-  delay: any
+  delay: DelayOptions;
 }) => {
+
   const [scope, animate] = useAnimate();
+
   let wordsArray = words.split(" ");
   useEffect(() => {
     animate(
@@ -25,7 +29,7 @@ export const TextGenerateEffect = ({
         delay: stagger(delay),
       }
     );
-  }, [scope.current, delay]);
+  }, [scope.current, delay, words]);
 
   const renderWords = () => {
     return (
@@ -47,7 +51,7 @@ export const TextGenerateEffect = ({
   return (
     <div className={cn("font-bold", className)}>
       <div className="mt-4">
-        <div className=" dark:text-white text-white text-2xl leading-snug tracking-wide">
+        <div  className=" dark:text-white text-white text-2xl leading-snug tracking-wide">
           {renderWords()}
         </div>
       </div>

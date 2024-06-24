@@ -6,6 +6,7 @@ import { BackgroundBeams } from '../../../components/ui/background-beams'
 import HeroTextReaveal from './HeroTextReveal'
 import { motion } from 'framer-motion'
 import "./hero.css"
+import { Link } from 'react-router-dom'
 
 const Hero = () => {
 
@@ -22,32 +23,31 @@ const Hero = () => {
             <HeroTextReaveal 
                 words={words}
                 delay={0.4}
-                className="fade-up"
+                className="fade-up mobile-padding"
             />
             {/* <h1 className="bts_hero_text">
                 Empowering Your <span className='bts_colored_text'>Business</span> with Talent and Technology
             </h1> */}
             <motion.p 
-                className="bts_hero_desc"
+                className="bts_hero_desc mobile-padding"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ 
-                    delay: 3.3,
-                    duration: 1
+                    duration: 1,
+                    delay: 2
                  }}
             >
-                Welcome to MailJet, the best transactional email service on the web.
-                We provide reliable, scalable, and customizable email solutions for
-                your business. Whether you&apos;re sending order confirmations,
-                password reset emails, or promotional campaigns, MailJet has got you
-                covered.
+                Broadview Technical Solutions transforms businesses with exceptional staffing and recruiting, cutting-edge digital marketing, bespoke software development, and efficient project management. We connect you with top talent, create impactful marketing strategies, develop tailored software solutions, and manage projects seamlessly. Discover how Broadview can elevate your business to new heights!
             </motion.p>
-            <ButtonMagic content="Get Started" />
+            <Link to="/about" >
+                <ButtonMagic content="Learn More" />
+            </Link>
             <InfoCard
                 src="img/broadview logo_var.png"
                 alt="broadview-logo"
                 content="Experience the intersection of quality and innovations where it matters"
-                cta="Learn More" 
+                cta="Contact Us" 
+                url="/contact"
             />
         </div>
         

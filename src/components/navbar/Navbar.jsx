@@ -7,6 +7,8 @@ import "./navbar.css"
 import Phone from "../icons/Phone"
 import Twitter_X from "../icons/Twitter-X"
 import ButtonMagic from "../buttons/ButtonMagic"
+import { Link } from "react-router-dom"
+import Linkedin from "../icons/Linkedin"
 
 const Navbar = () => {
 
@@ -28,7 +30,9 @@ const Navbar = () => {
                 </div>
                 <div className="bts_navbar_col">
                     <div className="bts_logo_container">
-                        <img className="bts_logo" src="/img/broadview_logo.png" alt="logo" />
+                        <Link to="/">
+                            <img className="bts_logo" src="/img/broadview_logo.png" alt="logo" />
+                        </Link>
                     </div>
                 </div>
                 <div className="bts_navbar_col menu_container">
@@ -37,9 +41,16 @@ const Navbar = () => {
                 <div className="bts_navbar_col bts_navbar_btn_container">
                     <div className="bts_navbar_btn">
                         {/* <PrimaryBtn value="Free Consultation" link="https://calendly.com/btech-informational/broadview-technical-information-session" /> */}
-                        <Phone color="#FA931C" width="16" height="16" />
-                        <Twitter_X color="#FA931C" width={16} height={16} />
-                        <ButtonMagic content="Get Started" />
+                        <Link to="tel:+18565520417">
+                            <Phone color="#FA931C" width="16" height="16" />
+                        </Link>
+                        <Link to="https://www.linkedin.com/company/broadviewtechnicalsolutions">
+                            {/* <Twitter_X color="#FA931C" width={16} height={16} /> */}
+                            <Linkedin color="#FA931C" width={16} height={16} />
+                        </Link>
+                        <Link to="/contact">
+                            <ButtonMagic content="Get Started" />
+                        </Link>
                     </div>
                 </div>
                 <div className="bts_navbar_col bts_hamburger_cont" onClick={handle_click_open}>

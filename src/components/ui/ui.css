@@ -27,3 +27,48 @@
 }
 
 /* Infinite Scroll Component End */
+
+/* Hide Scrollbar */
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+  }
+/* stop scroll */
+
+/* Tailwind CSS */
+/* Add a custom class for text outline */
+.text-outline .text-transparent {
+  /* Transparent text color */
+  color: transparent;
+  /* Adjust text stroke width as needed */
+  -webkit-text-stroke-width: 1px;
+  text-stroke-width: 1px;
+}
+
+/* Custom CSS for text stroke color */
+.text-outline .text-transparent {
+  -webkit-text-stroke-color: var(--primaryColor); /* Red outline */
+  text-stroke-color: var(--primaryColor); /* Red outline */
+}
+
+
+@media screen and (max-width: 450px) {
+  .bts-image-slider {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start !important;
+    padding-bottom: 30px;
+    /* justify-content: flex-end; */
+    
+  }
+
+  .bts-image-slider > div > h2 { 
+    font-size: 26px;
+    padding: 0;
+    padding-top: 25px;
+  }
+}

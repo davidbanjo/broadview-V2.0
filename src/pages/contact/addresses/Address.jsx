@@ -1,28 +1,23 @@
 import "./address.css"
 
-const Address = () => {
+const Address = ({ state, address, phone, style }) => {
   return (
     <div className="bts_address_cont">
         <div>
-            <h2>New Jersey Office</h2>
-            <p><span><b>Address: </b></span>3000 Atrium Way, Suite 200, Mt. Laurel, NJ, 08054</p>
-            <p><span><b>Phone: </b></span>+1 (856) 552-0417</p>
-            <p><span><b>Email: </b></span>info@broadviewtechnicalsolutions.com</p>
-        </div>
-        <div>
-            <h2>Delaware Office</h2>
-            <p><span><b>Address: </b></span>18 Blevins Dr Newcastle, DE 19720</p>
-            <p><span><b>Phone: </b></span>+1 (856) 552-0417</p>
-            <p><span><b>Email: </b></span>info@broadviewtechnicalsolutions.com</p>
-        </div>
-        <div>
-            <h2>Texas Office</h2>
-            <p><span><b>Address: </b></span>2902 E Arkansas Ln, Suite C, Arlington, TX 76010</p>
-            <p><span><b>Phone: </b></span>+1 (856) 552-0417</p>
-            <p><span><b>Email: </b></span>info@broadviewtechnicalsolutions.com</p>
+            <h2 className="bts_address_state">{state}</h2>
+            <div className="bst_address_location">
+              <p style={{ fontWeight: '700 !important' }}>{address}</p>
+              <div className="">
+                <p>{phone}</p>
+                <a  href="mailto:info@broadviewtechnicalsolutions.com">
+                  <p className="hover:!text-[#FA931C]" style={{ fontWeight: '700' }}>info@broadviewtechnicalsolutions.com</p>
+                </a>
+              </div>
+            </div>
         </div>
     </div>
   )
 }
 
 export default Address
+

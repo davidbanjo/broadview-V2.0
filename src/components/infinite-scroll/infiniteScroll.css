@@ -1,0 +1,5 @@
+@media screen and (max-width: 450px) {
+    .bts-infinite-scroll {
+        height: 30rem;
+    }
+}

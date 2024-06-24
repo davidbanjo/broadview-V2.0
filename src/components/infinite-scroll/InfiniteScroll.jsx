@@ -1,14 +1,14 @@
-"use client";
-
 import React, { useEffect, useState } from "react";
 import { InfiniteMovingCards } from "../ui/infinite-moving-cards";
 import { binatec_hero, cac_hero, greenbelt_hero, mixfits_hero, sonivox_hero } from "../../assets/portfolioAssets/assets/assets";
+import projectData from "../../pages/portfolio/sections/projects/projectdata";
+import './infiniteScroll.css'
 
-function InfiniteScroll() {
+function InfiniteScroll({ extra_css, height = "40rem", mobile_height = "10rem" }) {
   return (
-    <div className="h-[40rem] rounded-md flex flex-col antialiased bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden fade-up">
+    <div className={`h-[${height}] bts-infinite-scroll rounded-md flex flex-col antialiased bg-blacK !${extra_css} dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden fade-up`}>
       <InfiniteMovingCards
-        items={testimonials}
+        items={projectData}
         direction="right"
         speed="normal"
         pauseOnHover="true"
@@ -55,3 +55,7 @@ const testimonials = [
     url: mixfits_hero
   },
 ];
+
+
+// { projectData.map((project) => (
+//   <Link key={project.id} to={`/portfolio/${project.title.replace(/\s+/g, '-')}`} className="bts_project-card_cont"></Link>

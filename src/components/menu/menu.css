@@ -6,7 +6,8 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 40px;
     margin: 13px 0;
 }
 
@@ -71,6 +72,7 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
+    /* font-size: 16px !important; */
 }
 
 .bts_footer_navitems > a {
@@ -79,4 +81,10 @@
 
 .bts_footer_navitems > a:hover {
     color: var(--primaryColor);
+}
+
+@media screen and (max-width: 1550px) {
+    .bts_navitems > li {
+        font-size: 14px;
+    }
 }

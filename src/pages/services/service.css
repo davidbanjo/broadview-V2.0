@@ -1,0 +1,14 @@
+@media screen and (max-width: 450px) {
+    .bts-service-box {
+        flex-direction: column;
+        /* border: 1px solid; */
+        align-items: center;
+    }
+
+    .bts_portfolio-hero {
+        padding: 0 20px;
+        padding-top: 10rem;
+        padding-bottom: 5rem;
+
+    }
+}

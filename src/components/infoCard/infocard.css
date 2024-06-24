@@ -9,7 +9,7 @@
 }
 
 .bts-info-card-row {
-    max-width: 1024px;
+    max-width: 1240px;
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -23,4 +23,37 @@
 
 .bts-info-card-content {
     font-size: 21px;
+}
+
+@media screen and (max-width: 1550px) {
+    .bts-info-card {
+        height: 80px;
+    }
+
+    .bts-info-card-logo {
+        width: 70px;
+    }
+
+    .bts-info-card-content {
+        font-size: 20px
+    };
+}
+
+@media screen and (max-width: 500px) {
+    .bts-info-card {
+        height: max-content;
+        padding: 20px 0;
+        position: relative;
+    }
+    .bts-info-card-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .bts-info-card-content {
+        text-align: center;
+    }
+
+    .bts-info-card-logo {
+        width: 100px;
+    }
 }

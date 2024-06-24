@@ -7,13 +7,18 @@
     gap: 30px;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
 }
 
+.bts_project_cards h3 {
+    font-size: 22px !important;
+}
+
 .bts_project-card {
-    width: 450px;
-    height: 300px;
+    max-width: 450px;
+    width: 400px;
+    height: 250px;
     border-radius: 15px;
 }
 
@@ -27,38 +32,61 @@
 .cs-1 {
     background-image: url('../../assets/test-portfolio.jpg');
     background-size: cover;
-    /* background-position: center; */
+    background-position: center;
 }
 
 .cs-2 {
     background-image: url('../../assets/eta_hero_img.png');
     background-size: cover;
-    /* background-position: center; */
+    background-position: center;
 }
 
 .cs-3 {
     background-image: url('../../assets/binatec_hero.png');
     background-size: cover;
+    background-position: center;
 }
 
 .cs-4 {
     background-image: url('../../assets/cac_hero.png');
     background-size: cover;
+    background-position: center;
 }
 
 .cs-5 { 
     background-image: url('../../assets/greenbelt_hero_image.png');
     background-size: cover;
+    background-position: center;
 }
 
 .cs-6 { 
     background-image: url('../../assets/sonivox_hero.png');
     background-size: cover;
+    background-position: center;
 }
 
 .cs-7 { 
     background-image: url('../../assets/TokenizedMixFIts_hero.png');
     background-size: cover;
+    background-position: center;
+}
+
+.cs-8 {
+    background-image: url('../../assets/Alpha_mockup.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.cs-9 {
+    background-image: url('../../assets/invue.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.cs-10 {
+    background-image: url('../../assets/hoffman.png');
+    background-size: cover;
+    background-position: center;
 }
 
 .bts_category_cont {
@@ -70,11 +98,15 @@
 }
 
 .bts_category_cont > p {
-    font-size: 14px;
+    font-size: 11px;
     background-color: var(--secondaryColor);
     color: white;
-    padding: 8px 15px;
+    padding: 5px 10px;
     border-radius: 20px;
+}
+
+.bts_category_cont ~ h3 {
+    font-size: 20px !important;
 }
 
 .bts_project-card_cont {
@@ -127,25 +159,30 @@
 }
 
 .bts_project_logo {
-    width: 120px;
+    width: 100px;
 }
 
 .bts_project_category {
     display: flex;
     gap: 20px;
+    margin-bottom: 70px;
 }
 
 .bts_project_img {
     width: 100%;
-    display: grid;
-    place-items: center;
 }
 
-.bts_project_img > img {
-    width: 80%;
-    margin: 40px auto;
+.bts_project_img_cont {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.bts_project_img_cont > div > img:first-child {
+    width: 100%;
+    margin: 0 auto;
     border-radius: 25px;
-    box-shadow: 0 0 8px rgb(230, 229, 229);
+    box-shadow: 0 0 8px rgba(207, 207, 207, 0.699);
 }
 
 .bts_project_testimonial {
@@ -173,6 +210,37 @@
 
 .bts_project_about-client > img {
     width: 40%;
+}
+
+/* Version 2 code */
+
+
+.bts_about_client {
+    width: 100%;
+    display: flex;
+}
+
+/* .project-main, .project-sub {
+    padding: 10px;
+} */
+
+.project-main {
+    width: 30%;
+    border-right: 1px solid rgba(211, 211, 211, 0.322);
+    padding: 25px 0;
+}
+
+.project-main > h3 {
+    font-size: 23px;
+}
+
+.project-sub {
+    width: 70%;
+    padding: 25px 70px;
+}
+
+.project-sub > a > p {
+    color:  var(--primaryColor);
 }
 
 @media screen and (max-width: 1024px) {
@@ -219,11 +287,24 @@
         box-sizing: border-box;
         padding: 0 15px;
     }
+
+    .bts_about_client {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .bts_about_client > div {
+        width: 100%;
+    }
+
+    .project-sub {
+        padding: 0px 0px;
+    }
 }
 
 @media screen and (max-width: 480px) {
     .bts_portfolio, .bts_project {
-        padding: 30px 30px;
+        padding: 25px;
     }
     .bts_project-card {
         width: 100%;
@@ -233,10 +314,14 @@
         font-size: 18px;
         width: 90%;
     }
+
+    .bts_project_row {
+        padding: 10px;
+    }
 }
 
 @media screen and (max-width: 420px) {
     .bts_portfolio, .bts_project {
-        padding: 30px 20px;
+        padding: 15px;
     }
 }

@@ -1,0 +1,36 @@
+@media screen and (max-width: 450px) {
+    .bts-talent-acquisition-hero {
+        padding: 0 20px;
+        padding-top: 8rem;
+        gap: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    .bts-talent-acquisition-body-text {
+        padding: 0 20px;
+        padding-top: 70px;
+        font-size: 18px;
+    }
+
+    .bts-staffing-solutions-row:last-child {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .bts-taprocess-col {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .bts-taprocess-box {
+        width: 100%;
+    }
+
+    .bts-staffing-solutions-col {
+        width: 100%;
+    }
+
+    .bts_software_services_container {
+        padding: 20px 20px !important;
+    }
+}
